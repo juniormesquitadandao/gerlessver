@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  app:
+    build:
+      args:
+        ARG_LINUX_LOCALE: en_US.UTF-8
+        ARG_ELIXIR_VERSION: 1.13.4
+        ARG_NODE_VERSION: 18.2.0
+      context: .
+    depends_on:
+      - postgresql
+    #   - redis
+    working_dir: /home/user/project
+    environment:
+      MIX_HOME: /usr/local/lib/mix
+      IP: 0.0.0.0
+      PORT: 4000
+      DATABASE_HOST: postgresql
+      DATABASE_USERNAME: user
+      DATABASE_PASSWORD: password
+      DATABASE_PORT: 5432
+      # REDIS_URL: redis://:@redis:6379
+    extra_hosts:
+      - dockerhost:host-gateway
+    ports:
+      - 4000:4000
+    tty: true
+    volumes:
+      - app_local:/usr/local
+      - ~/.ssh:/home/user/.ssh
+      - ~/.gitconfig:/home/user/.gitconfig
+      - ~/.bash_history:/home/user/.bash_history
+      - .:/home/user/project
+  postgresql:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+  # redis:
+  #   image: redis:7
+volumes:
+  app_local:
+  postgresql_data:
