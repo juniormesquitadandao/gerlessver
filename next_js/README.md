@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     npm create next-app $(basename $PWD) -y
     mv $(basename $PWD)/* .
     mv $(basename $PWD)/.[^.]* .

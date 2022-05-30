@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     sdk install maven
     sdk install springboot
     spring init --dependencies=web

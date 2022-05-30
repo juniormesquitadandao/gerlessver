@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     gem install rails
     rails new --database postgresql --skip-bundle .
     bundle add redis

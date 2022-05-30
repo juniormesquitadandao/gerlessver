@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     composer global require laravel/installer
     laravel new $(basename $PWD)
     mv $(basename $PWD)/* .

@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     mix archive.install --force hex phx_new
     mix phx.new --database=postgres --no-install .
     ls config/* | while read file; do sed -i 's/username: "postgres"/username: System.get_env("DATABASE_USERNAME")/g' $file; done

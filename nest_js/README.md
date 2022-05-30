@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     npm i -g @nestjs/cli
     nest new --package-manager='npm' .
     npm run test

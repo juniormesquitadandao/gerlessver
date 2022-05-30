@@ -12,6 +12,7 @@ cd project
   docker compose build
   docker compose up -d
   docker compose exec app bash
+    git init
     pip install flask
     wget -nv https://raw.githubusercontent.com/Sysnove/flask-hello-world/master/hello.py --output-document app.py
     npm init
