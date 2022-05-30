@@ -12,9 +12,9 @@ Managerless version with docker.
 - Config git global: https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 - Config ssh: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 - Install any code editor ou IDE: https://www.sublimetext.com/docs/linux_repositories.html#apt
-- Run: docker -v
-- Run: docker compose -v
-- Run: git -v
+- Run: docker version
+- Run: docker compose version
+- Run: git version
 
 ## Backend frameworks
 
