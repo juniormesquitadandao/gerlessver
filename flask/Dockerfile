@@ -34,8 +34,11 @@ WORKDIR /home/user
 ARG ARG_NODE_VERSION
 RUN wget -nv "https://nodejs.org/dist/v${ARG_NODE_VERSION}/node-v${ARG_NODE_VERSION}-linux-x64.tar.gz" && \
   tar -xf "node-v${ARG_NODE_VERSION}-linux-x64.tar.gz" --directory '/usr/local' --strip-components '1' && \
-  rm -rf "node-v${ARG_NODE_VERSION}-linux-x64.tar.gz"
+  rm -rf "node-v${ARG_NODE_VERSION}-linux-x64.tar.gz" && \
+  npm install -g yarn
 
 RUN locale && \
   python --version && \
-  echo "node: `node -v`"
+  echo "node: `node -v`" && \
+  echo "npm: `npm -v`" && \
+  echo "yarn: `yarn -v`"

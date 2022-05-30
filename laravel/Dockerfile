@@ -34,7 +34,8 @@ WORKDIR /home/user
 ARG ARG_NODE_VERSION
 RUN wget -nv "https://nodejs.org/dist/v${ARG_NODE_VERSION}/node-v${ARG_NODE_VERSION}-linux-x64.tar.gz" && \
   tar -xf "node-v${ARG_NODE_VERSION}-linux-x64.tar.gz" --directory '/usr/local' --strip-components '1' && \
-  rm -rf "node-v${ARG_NODE_VERSION}-linux-x64.tar.gz"
+  rm -rf "node-v${ARG_NODE_VERSION}-linux-x64.tar.gz" && \
+  npm install -g yarn
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
   php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" && \
@@ -46,4 +47,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 RUN locale && \
   php -v && \
   echo "node: `node -v`" && \
+  echo "npm: `npm -v`" && \
+  echo "yarn: `yarn -v`" && \
   composer --version
