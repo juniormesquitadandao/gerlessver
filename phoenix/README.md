@@ -71,7 +71,7 @@ cd project
   # Change "app.build.args" in current docker-compose.yml
   # Change versions in current project
   docker volume rm project_app_local
-  docker volume rm project_postgresql_local
+  docker volume rm project_postgresql_data
   docker compose config
   docker compose build
   docker compose up -d
