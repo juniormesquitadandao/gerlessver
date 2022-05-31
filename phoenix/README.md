@@ -25,6 +25,7 @@ cd project
     npm init
     mix test
     iex -S mix
+      exit
     mix phx.server
     # Brower: http://localhost:4000
     # Press: CTRL+C
