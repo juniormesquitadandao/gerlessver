@@ -14,7 +14,9 @@ RUN apt update && \
     git-core \
     curl \
     wget \
-    zip && \
+    zip \
+    vim && \
+  update-alternatives --config editor && \
   apt autoremove --purge && \
   apt autoclean
 
