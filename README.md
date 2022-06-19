@@ -2,7 +2,7 @@
 
 Managerless version with docker.
 
-## Config host
+## Configure host
 
 - Uninstall docker engine: https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
 - Install docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
