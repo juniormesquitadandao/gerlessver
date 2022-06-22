@@ -6,8 +6,8 @@ Managerless version with docker for Spring Boot.
 
 ```shell
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/spring_boot/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/spring_boot/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
@@ -36,8 +36,8 @@ cd project
 ```shell
 git clone ...
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/spring_boot/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/spring_boot/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d

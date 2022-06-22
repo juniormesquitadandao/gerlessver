@@ -6,8 +6,8 @@ Managerless version with docker for Phoenix.
 
 ```shell
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/phoenix/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/phoenix/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
@@ -42,8 +42,8 @@ cd project
 ```shell
 git clone ...
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/phoenix/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/phoenix/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d

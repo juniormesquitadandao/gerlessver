@@ -6,8 +6,8 @@ Managerless version with docker for Flask.
 
 ```shell
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/flask/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/flask/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
@@ -32,8 +32,8 @@ cd project
 ```shell
 git clone ...
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/flask/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/flask/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d

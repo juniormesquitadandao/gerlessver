@@ -1,6 +1,8 @@
-# GerlessVer
+# Gerlessver
 
 Managerless version with docker.
+
+![Architecture](https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/sp1/architecture.png)
 
 ## Configure host
 
@@ -18,14 +20,14 @@ Managerless version with docker.
 
 ## Backend frameworks
 
-- Ruby on Rails: https://github.com/juniormesquitadandao/gerless_ver/tree/master/ruby_on_rails
-- Nest JS: https://github.com/juniormesquitadandao/gerless_ver/tree/master/nest_js
-- Spring Boot: https://github.com/juniormesquitadandao/gerless_ver/tree/master/spring_boot
-- Laravel: https://github.com/juniormesquitadandao/gerless_ver/tree/master/laravel
-- Flask: https://github.com/juniormesquitadandao/gerless_ver/tree/master/flask
-- Phoenix: https://github.com/juniormesquitadandao/gerless_ver/tree/master/phoenix
+- Ruby on Rails: https://github.com/juniormesquitadandao/gerlessver/tree/master/ruby_on_rails
+- Nest JS: https://github.com/juniormesquitadandao/gerlessver/tree/master/nest_js
+- Spring Boot: https://github.com/juniormesquitadandao/gerlessver/tree/master/spring_boot
+- Laravel: https://github.com/juniormesquitadandao/gerlessver/tree/master/laravel
+- Flask: https://github.com/juniormesquitadandao/gerlessver/tree/master/flask
+- Phoenix: https://github.com/juniormesquitadandao/gerlessver/tree/master/phoenix
 
 ## Frontend frameworks
 
-- Nuxt JS: https://github.com/juniormesquitadandao/gerless_ver/tree/master/nuxt_js
-- Next JS: https://github.com/juniormesquitadandao/gerless_ver/tree/master/next_js
+- Nuxt JS: https://github.com/juniormesquitadandao/gerlessver/tree/master/nuxt_js
+- Next JS: https://github.com/juniormesquitadandao/gerlessver/tree/master/next_js

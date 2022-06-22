@@ -6,8 +6,8 @@ Managerless version with docker for Ruby on Rails.
 
 ```shell
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/ruby_on_rails/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/ruby_on_rails/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/ruby_on_rails/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/ruby_on_rails/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
@@ -38,8 +38,8 @@ cd project
 ```shell
 git clone ...
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/ruby_on_rails/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/ruby_on_rails/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/ruby_on_rails/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/ruby_on_rails/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d

@@ -6,8 +6,8 @@ Managerless version with docker for Laravel.
 
 ```shell
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/laravel/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/laravel/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
@@ -37,8 +37,8 @@ cd project
 ```shell
 git clone ...
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/laravel/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerless_ver/master/laravel/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
