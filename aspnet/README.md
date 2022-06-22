@@ -1,23 +1,20 @@
 # Gerlessver
 
-Managerless version with docker for Nest JS.
+Managerless version with docker for ASP.NET.
 
 ## When is creating new project
 
 ```shell
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
   docker compose exec app bash
     git init
-    npm i -g @nestjs/cli
-    nest new --package-manager='npm' .
-    npm run test
-    npm run start:dev
-    # Brower: http://localhost:3000
+    dotnet --version
+    # Brower: http://localhost:8080
     # Press: CTRL+C
     git status
     git add .
@@ -32,16 +29,14 @@ cd project
 ```shell
 git clone ...
 cd project
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/Dockerfile
-  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/docker-compose.yml
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/Dockerfile
+  wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/docker-compose.yml
   docker compose config
   docker compose build
   docker compose up -d
   docker compose exec app bash
-    npm install
-    npm run test
-    npm run start:dev
-    # Brower: http://localhost:3000
+    dotnet --version
+    # Brower: http://localhost:8080
     # Press: CTRL+C
     git status
     git add .
@@ -58,14 +53,13 @@ cd project
   # Change "app.build.args" in current docker-compose.yml
   # Change versions in current project
   docker volume rm project_app_local
+  docker volume rm project_postgresql_data
   docker compose config
   docker compose build
   docker compose up -d
   docker compose exec app bash
-    npm install
-    npm run test
-    npm run start:dev
-    # Brower: http://localhost:3000
+    dotnet --version
+    # Brower: http://localhost:8080
     # Press: CTRL+C
     git status
     git add .
