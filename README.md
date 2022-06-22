@@ -26,6 +26,7 @@ Managerless version with docker.
 - Laravel: https://github.com/juniormesquitadandao/gerlessver/tree/master/laravel
 - Flask: https://github.com/juniormesquitadandao/gerlessver/tree/master/flask
 - Phoenix: https://github.com/juniormesquitadandao/gerlessver/tree/master/phoenix
+- ASP.NET: https://github.com/juniormesquitadandao/gerlessver/tree/master/aspnet
 
 ## Frontend frameworks
 
