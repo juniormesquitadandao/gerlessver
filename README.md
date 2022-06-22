@@ -2,7 +2,7 @@
 
 Managerless version with docker.
 
-![Architecture](https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/sp1/architecture.png)
+![Architecture](https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/architecture.png)
 
 ## Configure host
 
