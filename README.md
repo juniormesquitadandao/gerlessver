@@ -1,8 +1,8 @@
 # Gerlessver
 
-Managerless version with docker.
-
 ![Architecture](https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/architecture.png)
+
+Managerless version with docker.
 
 ## Configure host
 
