@@ -6,10 +6,16 @@ Managerless version with docker.
 
 ## Configure host
 
+### Mac
+- Install Docker Desktop: https://docs.docker.com/desktop/install/mac-install
+
+### Linux
 - Uninstall docker engine: https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
 - Install docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 - Config docker as a non-root user: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 - Config docker to start on boot: https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot
+
+### All
 - Install git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 - Config git global: https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 - Config ssh: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
@@ -17,6 +23,7 @@ Managerless version with docker.
 - Run: docker version
 - Run: docker compose version
 - Run: git version
+- Run: git config --global --add safe.directory "\*"
 
 ## Backend frameworks
 

@@ -4,6 +4,8 @@ services:
     build:
       args:
         ARG_LINUX_LOCALE: en_US.UTF-8
+        ARG_USER_UID: ${ARG_USER_UID}
+        ARG_USER_GID: ${ARG_USER_GID}
         ARG_NODE_VERSION: 18.2.0
       context: .
     working_dir: /home/user/project

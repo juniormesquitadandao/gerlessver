@@ -8,8 +8,8 @@ Managerless version with docker for Next JS.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/next_js/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/next_js/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
     git init
@@ -36,8 +36,8 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/next_js/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/next_js/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
     npm install
@@ -59,8 +59,8 @@ cd project
   # Change "app.build.args" in current docker-compose.yml
   # Change versions in current project
   docker volume rm project_app_local
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
     npm install

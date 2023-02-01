@@ -8,10 +8,12 @@ Managerless version with docker for Flask.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     git init
     pip install flask
     wget -nv https://raw.githubusercontent.com/Sysnove/flask-hello-world/master/hello.py --output-document app.py
@@ -34,10 +36,12 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/flask/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     pip install -r requirements.txt
     npm install
     flask run
@@ -59,10 +63,12 @@ cd project
   # Change versions in current project
   docker volume rm project_app_local
   docker volume rm project_postgresql_data
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     pip install -r requirements.txt
     npm install
     flask run

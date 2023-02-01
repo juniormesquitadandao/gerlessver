@@ -8,10 +8,12 @@ Managerless version with docker for ASP.NET.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     git init
     dotnet --version
     # Brower: http://localhost:8080
@@ -31,10 +33,12 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/aspnet/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     dotnet --version
     # Brower: http://localhost:8080
     # Press: CTRL+C
@@ -54,10 +58,12 @@ cd project
   # Change versions in current project
   docker volume rm project_app_local
   docker volume rm project_postgresql_data
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     dotnet --version
     # Brower: http://localhost:8080
     # Press: CTRL+C

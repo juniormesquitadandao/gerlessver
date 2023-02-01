@@ -4,15 +4,11 @@ services:
     build:
       args:
         ARG_LINUX_LOCALE: en_US.UTF-8
+        ARG_USER_UID: ${ARG_USER_UID}
+        ARG_USER_GID: ${ARG_USER_GID}
         ARG_NODE_VERSION: 18.2.0
       context: .
-    # depends_on:
-    #   - postgresql
-    #   - redis
     working_dir: /home/user/project
-    # environment:
-    #   DATABASE_URL: postgres://user:password@postgresql:5432
-    #   REDIS_URL: redis://:@redis:6379
     extra_hosts:
       - dockerhost:host-gateway
     ports:
@@ -24,15 +20,5 @@ services:
       - ~/.gitconfig:/home/user/.gitconfig
       - ~/.bash_history:/home/user/.bash_history
       - .:/home/user/project
-  # postgresql:
-  #   image: postgres:14
-  #   environment:
-  #     POSTGRES_USER: user
-  #     POSTGRES_PASSWORD: password
-  #   volumes:
-  #     - postgresql_data:/var/lib/postgresql/data
-  # redis:
-  #   image: redis:7
 volumes:
   app_local:
-  # postgresql_data:

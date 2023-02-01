@@ -4,8 +4,10 @@ services:
     build:
       args:
         ARG_LINUX_LOCALE: en_US.UTF-8
-        ARG_RUBY_VERSION: 3.1.2
-        ARG_NODE_VERSION: 18.2.0
+        ARG_USER_UID: ${ARG_USER_UID}
+        ARG_USER_GID: ${ARG_USER_GID}
+        ARG_RUBY_VERSION: 3.2.0
+        ARG_NODE_VERSION: 18.13.0
       context: .
     depends_on:
       - postgresql
@@ -34,8 +36,12 @@ services:
       POSTGRES_PASSWORD: password
     volumes:
       - postgresql_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
   redis:
     image: redis:7
+    ports:
+      - 6379:6379
 volumes:
   app_local:
   postgresql_data:

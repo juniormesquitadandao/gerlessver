@@ -8,8 +8,8 @@ Managerless version with docker for Spring Boot.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
     git init
@@ -38,8 +38,8 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/spring_boot/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
     mvn spring-boot:run
@@ -60,8 +60,8 @@ cd project
   # Change "app.build.args" in current docker-compose.yml
   # Change versions in current project
   docker volume rm project_app_local
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
     mvn spring-boot:run

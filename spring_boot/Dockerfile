@@ -1,5 +1,5 @@
 ARG ARG_OPEN_JDK_VERSION
-FROM openjdk:${ARG_OPEN_JDK_VERSION}-slim-buster
+FROM --platform=linux/amd64 openjdk:${ARG_OPEN_JDK_VERSION}-slim-buster
 
 SHELL ["/bin/sh", "-c"]
 
@@ -23,9 +23,11 @@ RUN apt update && \
 ARG ARG_LINUX_LOCALE
 ENV LC_ALL=$ARG_LINUX_LOCALE LANG=$ARG_LINUX_LOCALE LANGUAGE=$ARG_LINUX_LOCALE
 
-RUN getent passwd '1000' | cut -d: -f1 | { read username; [ -z "$username" ] && exit 0 || deluser --remove-home $username; } && \
-  addgroup --gid '1000' user && \
-  adduser --disabled-password --gecos '' --uid '1000' --gid '1000' user && \
+ARG ARG_USER_UID ARG_USER_GID
+RUN getent passwd $ARG_USER_UID | cut -d: -f1 | { read username; [ -z "$username" ] && exit 0 || deluser --remove-home $username; } && \
+  getent group $ARG_USER_GID | cut -d: -f1 | { read groupname; [ -z "$groupname" ] && exit 0 || delgroup --remove-home $groupname; } && \
+  addgroup --gid $ARG_USER_GID user && \
+  adduser --disabled-password --gecos '' --uid  $ARG_USER_UID --gid $ARG_USER_GID user && \
   passwd -d root && \
   echo 'user ALL=(ALL:ALL) NOPASSWD:ALL' >> /etc/sudoers && \
   chown user:user -R /usr/local

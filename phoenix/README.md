@@ -8,10 +8,13 @@ Managerless version with docker for Phoenix.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+    echo > /dev/tcp/dockerhost/5432 && echo "Postgresql is running"
+
     git init
     mix archive.install --force hex phx_new
     mix phx.new --database=postgres --no-install .
@@ -44,10 +47,13 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/phoenix/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+    echo > /dev/tcp/dockerhost/5432 && echo "Postgresql is running"
+
     mix deps.get
     mix deps.compile
     mix ecto.create
@@ -73,10 +79,13 @@ cd project
   # Change versions in current project
   docker volume rm project_app_local
   docker volume rm project_postgresql_data
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+    echo > /dev/tcp/dockerhost/5432 && echo "Postgresql is running"
+
     mix deps.get
     mix deps.compile
     mix ecto.create

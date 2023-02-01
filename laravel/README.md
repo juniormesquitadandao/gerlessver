@@ -8,10 +8,12 @@ Managerless version with docker for Laravel.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     git init
     composer global require laravel/installer
     laravel new $(basename $PWD)
@@ -39,10 +41,12 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/laravel/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     composer install
     npm install
     php artisan test
@@ -65,10 +69,12 @@ cd project
   # Change versions in current project
   docker volume rm project_app_local
   docker volume rm project_postgresql_data
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     composer install
     npm install
     php artisan test

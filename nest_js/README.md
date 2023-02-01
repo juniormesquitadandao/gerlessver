@@ -8,10 +8,12 @@ Managerless version with docker for Nest JS.
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     git init
     npm i -g @nestjs/cli
     nest new --package-manager='npm' .
@@ -34,10 +36,12 @@ git clone ...
 cd project
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/Dockerfile
   wget -nv https://raw.githubusercontent.com/juniormesquitadandao/gerlessver/master/nest_js/docker-compose.yml
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     npm install
     npm run test
     npm run start:dev
@@ -58,10 +62,12 @@ cd project
   # Change "app.build.args" in current docker-compose.yml
   # Change versions in current project
   docker volume rm project_app_local
-  docker compose config
-  docker compose build
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose config
+  ARG_USER_UID=$(id -u) ARG_USER_GID=$(id -g) docker compose build
   docker compose up -d
   docker compose exec app bash
+    cat /etc/hosts | grep dockerhost
+
     npm install
     npm run test
     npm run start:dev
