@@ -23,7 +23,7 @@ Managerless version with docker.
 - Run: docker version
 - Run: docker compose version
 - Run: git version
-- Run: git config --global --add safe.directory "\*"
+- Run: git config --global --add safe.directory "*"
 
 ## Backend frameworks
 
