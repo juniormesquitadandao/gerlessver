@@ -8,12 +8,15 @@ Managerless version with docker.
 
 ### Mac
 - Install Docker Desktop: https://docs.docker.com/desktop/install/mac-install
+- Install Rosetta: https://support.apple.com/en-us/102527
+- Install QEMU: https://www.qemu.org/download/#macos
 
 ### Linux
 - Uninstall docker engine: https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
 - Install docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 - Config docker as a non-root user: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 - Config docker to start on boot: https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot
+- Install QEMU: https://www.qemu.org/download/#linux
 
 ### All
 - Install git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
@@ -24,6 +27,9 @@ Managerless version with docker.
 - Run: docker compose version
 - Run: git version
 - Run: git config --global --add safe.directory "*"
+- Run: uname -m
+- Run: DOCKER_DEFAULT_PLATFORM=linux/amd64 docker run --rm -t i386/ubuntu uname -m
+- Run: DOCKER_DEFAULT_PLATFORM=linux/arm64 docker run --rm -t arm64v8/ubuntu uname -m
 
 ## Backend frameworks
 
