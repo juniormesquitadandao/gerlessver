@@ -29,6 +29,50 @@ Managerless version with docker.
 - Run: DOCKER_DEFAULT_PLATFORM=linux/amd64 docker run --rm -t i386/ubuntu uname -m
 - Run: DOCKER_DEFAULT_PLATFORM=linux/arm64 docker run --rm -t arm64v8/ubuntu uname -m
 
+### Git Muilt Accounts
+Update: ~/.ssh/config
+```sh
+Host 01.github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_01_rsa
+
+Host 02.github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_02_rsa
+
+Host 01.bitbucket.org
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/bitbucket_01_rsa
+
+Host 02.bitbucket.org
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/bitbucket_02_rsa
+
+Host 01.gitlab.com
+  HostName gitlab.com
+  User git
+  IdentityFile ~/.ssh/gitlab_01_rsa
+
+Host 02.gitlab.com
+  HostName gitlab.com
+  User git
+  IdentityFile ~/.ssh/gitlab_02_rsa
+```
+
+Clone:
+```sh
+git clone git@01.github.com:name/project.git
+git clone git@02.github.com:name/project.git
+git clone git@01.bitbucket.org:name/project.git
+git clone git@02.bitbucket.org:name/project.git
+git clone git@01.gitlab.com:name/project.git
+git clone git@02.gitlab.com:name/project.git
+```
+
 ## Backend frameworks
 
 - Ruby on Rails: https://github.com/juniormesquitadandao/gerlessver/tree/master/ruby_on_rails
