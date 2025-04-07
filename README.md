@@ -12,8 +12,8 @@ Managerless version with docker.
 
 ### Linux
 - Uninstall docker engine: https://docs.docker.com/engine/install/ubuntu/#uninstall-docker-engine
-- Install docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
-- Config docker as a non-root user: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+- Install docker engine (without run hello world): https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+- Config docker as a non-root user ((with run hello world)): https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 - Config docker to start on boot: https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot
 
 ### All
