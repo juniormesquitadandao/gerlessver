@@ -29,7 +29,7 @@ Managerless version with docker.
 - Run: DOCKER_DEFAULT_PLATFORM=linux/amd64 docker run --rm -t i386/ubuntu uname -m
 - Run: DOCKER_DEFAULT_PLATFORM=linux/arm64 docker run --rm -t arm64v8/ubuntu uname -m
 
-### Git Muilt Accounts
+### Git Multi Accounts
 Update: ~/.ssh/config
 ```sh
 Host 01.github.com
